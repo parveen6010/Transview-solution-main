@@ -10,9 +10,15 @@ function AuthorizationForm() {
   const handleChange=(e)=>{
     setIsChecked(!isChecked) 
   }
+   
+  const eway =() =>{
+    
+    window.location.href ="/e-way-bill.pdf";
+  }
+
   return (
     <div className="bg-gray-700 w-screen h-screen flex justify-center items-center">
-      <form
+      <div
         action=""
         className="flex flex-col justify-center items-center align-middle w-3/5 h-3/5 bg-white rounded-md shadow-sm shadow-gray-300"
       >
@@ -34,11 +40,14 @@ function AuthorizationForm() {
           <button type="button" className='border-green-500 bg-green-500 cursor-pointer text-white rounded-full px-12 py-2 inline-block font-semibold' >
             Verify
           </button>
-          <button type="submit" className='border-green-500 bg-green-500 cursor-pointer text-white rounded-full px-12 py-2 inline-block font-semibold'>
+          <button type="submit" className='border-green-500 bg-green-500 cursor-pointer text-white rounded-full px-12 py-2 inline-block font-semibold'
+          onClick={eway}
+          >
             Submit
           </button>
+          
         </div>
-      </form>
+      </div>
     </div>
   );
 }
