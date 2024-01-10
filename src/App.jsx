@@ -10,6 +10,10 @@ import Dashboard from "./pages/Dashboard";
 import Pdffill from "./pages/Pdffill";
 import Verify from "./pages/Verify";
 import AuthorizationForm from "./components/AuthorizationForm";
+import Paymentpage from "./pages/Paymentpage";
+
+
+
 
 function App() {
   const [isLogin, setIsLogin] = useState(true);
@@ -26,7 +30,7 @@ function App() {
         <Route path="/pdffill" element={<Pdffill />} />
         <Route path="/verify" element={<Verify />} />
         <Route path="/AuthorizationForm" element={<AuthorizationForm />} />
-
+        <Route path="/Paymentpage" element={<Paymentpage />} />
       </Routes>
     </Router>
   );
